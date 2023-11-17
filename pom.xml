@@ -90,9 +90,6 @@
               <style>GOOGLE</style>
               <reflowLongStrings>true</reflowLongStrings>
             </googleJavaFormat>
-            <licenseHeader>
-              <file>${basedir}/spotless/header.txt</file>
-            </licenseHeader>
           </java>
         </configuration>
       </plugin>

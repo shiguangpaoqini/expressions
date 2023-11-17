@@ -5,29 +5,162 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2321bd-98b0-4cab-b5c0-fdbbe289d814" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/loncus/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/loncus/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/EvaluationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/ExpressionConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/FunctionDictionaryIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/MapBasedFunctionDictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/MapBasedOperatorDictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/OperatorDictionaryIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/DataAccessorIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/EvaluationValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/MapBasedDataAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/ArrayConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/BooleanConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/ConverterIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/DateTimeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/DefaultEvaluationValueConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/DurationConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/EvaluationValueConverterIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/ExpressionNodeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/NumberConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/StringConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion/TimeSeriesPointConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/Time.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimePeriod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeriesPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/AbstractFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/FunctionIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/FunctionParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/FunctionParameterDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/FunctionParameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/AbsFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/CeilingFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/CoalesceFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/FactFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/FloorFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/IfFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/Log10Function.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/LogFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/MaxFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/MinFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/NotFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/RandomFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/RoundFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/SqrtFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/basic/SumFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/AbstractDateTimeParseFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeFormatFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeFromEpochFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeParseFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeToEpochFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DurationFromDaysFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DurationFromMillisFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DurationParseFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/ZonedDateTimeParseFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/string/StringContains.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/string/StringLowerFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/string/StringUpperFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcosFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcosHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcosRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcotFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcotHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AcotRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AsinFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AsinHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AsinRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/Atan2Function.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/Atan2RFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AtanFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AtanHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/AtanRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CosFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CosHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CosRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CotFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CotHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CotRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CscFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CscHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/CscRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/DegFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/RadFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SecFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SecHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SecRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SinFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SinHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/SinRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/TanFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/TanHFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/trigonometric/TanRFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/AbstractOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/InfixOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/OperatorAnnotationNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/OperatorIfc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/PostfixOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/PrefixOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixDivisionOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixMinusOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixModuloOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixMultiplicationOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixPlusOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/InfixPowerOfOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/PrefixMinusOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/arithmetic/PrefixPlusOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixAndOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixEqualsOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixGreaterEqualsOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixGreaterOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixLessEqualsOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixLessOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixNotEqualsOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/InfixOrOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/operators/booleans/PrefixNotOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/parser/ASTNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/parser/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/parser/ShuntingYardConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/parser/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/parser/Tokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/loncus/ExpressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/loncus/TimeSeriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loncus/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loncus/lombok.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/lombok.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2XZa0o4DRYekJxPFh46qxVKrkYm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,21 +171,142 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dcry/Projects/loncus-expression/src/main/java/org/loncus",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/dcry/Projects/loncus-expression",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org/loncus" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/loncus/data" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/loncus/data/conversion" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/loncus" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/java/com/loncus/data" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.loncus.data.type" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.loncus.data.type" />
+      <recent name="com.loncus" />
+      <recent name="com.loncus.data" />
+      <recent name="" />
+      <recent name="org.loncus.data" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn spotless:apply" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ExpressionTest.testGetUsedVariables">
+    <configuration name="ExpressionTest.testExpressionNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loncus-expression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loncus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loncus" />
+      <option name="MAIN_CLASS_NAME" value="com.loncus.ExpressionTest" />
+      <option name="METHOD_NAME" value="testExpressionNode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpressionTest.testGetAllASTNodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loncus-expression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loncus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loncus" />
+      <option name="MAIN_CLASS_NAME" value="com.loncus.ExpressionTest" />
+      <option name="METHOD_NAME" value="testGetAllASTNodes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpressionTest.testGetUsedVariables" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loncus-expression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loncus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loncus" />
+      <option name="MAIN_CLASS_NAME" value="com.loncus.ExpressionTest" />
+      <option name="METHOD_NAME" value="testGetUsedVariables" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeSeriesTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loncus-expression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loncus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loncus" />
+      <option name="MAIN_CLASS_NAME" value="com.loncus.TimeSeriesTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeSeriesTest.testTimeSeriesInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loncus-expression" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loncus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loncus" />
+      <option name="MAIN_CLASS_NAME" value="com.loncus.TimeSeriesTest" />
+      <option name="METHOD_NAME" value="testTimeSeriesInit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExpressionTest.testGetUsedVariables" />
+        <item itemvalue="JUnit.ExpressionTest.testGetAllASTNodes" />
+        <item itemvalue="JUnit.TimeSeriesTest.test" />
+        <item itemvalue="JUnit.TimeSeriesTest.testTimeSeriesInit" />
+        <item itemvalue="JUnit.ExpressionTest.testExpressionNode" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,11 +316,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698838835764</updated>
-      <workItem from="1698838838888" duration="965000" />
+      <workItem from="1698838838888" duration="1878000" />
+      <workItem from="1698892409276" duration="60735000" />
+      <workItem from="1700129219218" duration="16663000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/loncus/TimeSeriesTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/loncus_expression$ExpressionTest_testGetUsedVariables.ic" NAME="ExpressionTest.testGetUsedVariables 覆盖结果" MODIFIED="1700211137770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.loncus.*</FILTER>
+    </SUITE>
   </component>
 </project>
