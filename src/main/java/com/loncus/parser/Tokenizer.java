@@ -35,8 +35,6 @@ public class Tokenizer {
 
   private int arrayBalance;
 
-  private int varBalance;
-
   public Tokenizer(String expressionString, ExpressionConfiguration configuration) {
     this.expressionString = expressionString;
     this.configuration = configuration;
@@ -64,10 +62,6 @@ public class Tokenizer {
 
     if (arrayBalance > 0) {
       throw new ParseException(expressionString, "Closing array not found");
-    }
-
-    if (varBalance > 0) {
-      throw new ParseException(expressionString, "Closing var not found");
     }
 
     return tokens;
@@ -114,6 +108,8 @@ public class Tokenizer {
       return parseArrayOpen();
     } else if (currentChar == ']' && configuration.isArraysAllowed()) {
       return parseArrayClose();
+    } else if (currentChar == '{' && configuration.isVarsAllowed()) {
+      return parseVars();
     } else if (currentChar == ',') {
       Token token = new Token(currentColumnIndex, ",", TokenType.COMMA);
       consumeChar();
@@ -332,9 +328,25 @@ public class Tokenizer {
     return new Token(tokenStartIndex, tokenValue.toString(), TokenType.NUMBER_LITERAL);
   }
 
+  private Token parseVars() {
+    int tokenStartIndex = currentColumnIndex;
+    StringBuilder tokenValue = new StringBuilder();
+    while (currentChar != -1) {
+      tokenValue.append((char) currentChar);
+      if (currentChar == '}') {
+        consumeChar();
+        break;
+      }
+      consumeChar();
+    }
+    String tokenName = tokenValue.toString();
+    return new Token(tokenStartIndex, tokenName, TokenType.VARIABLE_OR_CONSTANT);
+  }
+
   private Token parseIdentifier() throws ParseException {
     int tokenStartIndex = currentColumnIndex;
     StringBuilder tokenValue = new StringBuilder();
+
     while (currentChar != -1 && isAtIdentifierChar()) {
       tokenValue.append((char) currentChar);
       consumeChar();
@@ -491,19 +503,11 @@ public class Tokenizer {
   }
 
   private boolean isAtIdentifierStart() {
-    return Character.isLetter(currentChar)
-        || currentChar == '_'
-        || currentChar == '{'
-        || currentChar == '}';
+    return Character.isLetter(currentChar) || currentChar == '_';
   }
 
   private boolean isAtIdentifierChar() {
-    return Character.isLetter(currentChar)
-        || Character.isDigit(currentChar)
-        || currentChar == '_'
-        || currentChar == '-'
-        || currentChar == '{'
-        || currentChar == '}';
+    return Character.isLetter(currentChar) || Character.isDigit(currentChar) || currentChar == '_';
   }
 
   private void skipBlanks() {

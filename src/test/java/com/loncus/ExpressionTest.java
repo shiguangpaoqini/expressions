@@ -11,6 +11,7 @@ import java.math.MathContext;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.junit.jupiter.api.Test;
 
 class ExpressionTest {
@@ -155,7 +156,9 @@ class ExpressionTest {
         new Expression(
             "{d2776448-620b-4e80-8e4d-6db6ccc269cf}/(1-{474ec7e1-bf0f-4001-ae19-8baedada25c9}/100)-{474ec7e1-bf0f-4001-ae19-8baedada25c9}");
 
-    assertThat(expression.getUsedVariables())
+    Set vars = expression.getUsedVariables();
+
+    assertThat(vars)
         .containsExactlyInAnyOrder(
             "{d2776448-620b-4e80-8e4d-6db6ccc269cf}", "{474ec7e1-bf0f-4001-ae19-8baedada25c9}");
   }

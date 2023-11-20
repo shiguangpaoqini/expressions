@@ -75,7 +75,7 @@ public class ExpressionConfiguration {
           Map.entry("/", new InfixDivisionOperator()),
           Map.entry("^", new InfixPowerOfOperator()),
           Map.entry("%", new InfixModuloOperator()),
-          //          // booleans
+          // booleans
           Map.entry("=", new InfixEqualsOperator()),
           Map.entry("==", new InfixEqualsOperator()),
           Map.entry("!=", new InfixNotEqualsOperator()),
@@ -104,12 +104,12 @@ public class ExpressionConfiguration {
           //          Map.entry("LOG", new LogFunction()),
           //          Map.entry("LOG10", new Log10Function()),
           Map.entry("MAX", new MaxFunction()),
-          Map.entry("MIN", new MinFunction())
+          Map.entry("MIN", new MinFunction()),
           //          Map.entry("NOT", new NotFunction()),
           //          Map.entry("RANDOM", new RandomFunction()),
           //          Map.entry("ROUND", new RoundFunction()),
-          //          Map.entry("SUM", new SumFunction()),
-          //          Map.entry("SQRT", new SqrtFunction()),
+          Map.entry("SUM", new SumFunction()),
+          Map.entry("SQRT", new SqrtFunction())
           // trigonometric
           //          Map.entry("ACOS", new AcosFunction()),
           //          Map.entry("ACOSH", new AcosHFunction()),
