@@ -32,6 +32,7 @@ import java.util.List;
  *   <tr><td>Duration</td><td>DurationConverter</td></tr>
  *   <tr><td>ASTNode</td><td>ASTNode</td></tr>
  *   <tr><td>List&lt;?&gt;</td><td>ArrayConverter - each entry will be converted</td></tr>
+ *   <tr><td>TimeSeriesPoint</td><td>TimeSeriesPointConverter</td></tr>
  * </table>
  *
  * <i>* Be careful with conversion problems when using float or double, which are fractional
@@ -47,7 +48,8 @@ public class DefaultEvaluationValueConverter implements EvaluationValueConverter
           new DateTimeConverter(),
           new DurationConverter(),
           new ExpressionNodeConverter(),
-          new ArrayConverter());
+          new ArrayConverter(),
+          new TimeSeriesPointConverter());
 
   public EvaluationValue convertObject(Object object, ExpressionConfiguration configuration) {
 

@@ -58,6 +58,10 @@ public class TimeSeries {
     return new TimeSeries(times, values);
   }
 
+  public final NavigableSet<Time> getTimes() {
+    return this.times;
+  }
+
   /**
    * get time series values by index
    *

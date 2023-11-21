@@ -1,6 +1,7 @@
 package com.loncus.data.type;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
@@ -70,6 +71,14 @@ public final class Time implements Comparable<Time> {
     return this.dateTime.compareTo(otherTime.dateTime);
   }
 
+  public boolean isAfter(Time otherTime) {
+    return this.dateTime.isAfter(otherTime.dateTime);
+  }
+
+  public boolean isBefore(Time otherTime) {
+    return this.dateTime.isBefore(otherTime.dateTime);
+  }
+
   public static Builder builder() {
     return new Builder();
   }
@@ -94,6 +103,10 @@ public final class Time implements Comparable<Time> {
   @Override
   public String toString() {
     return this.dateTime.toString();
+  }
+
+  public LocalDateTime toLocalDateTime() {
+    return this.dateTime.toLocalDateTime();
   }
 
   public String prettyPrint() {
