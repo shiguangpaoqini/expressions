@@ -47,6 +47,46 @@ public final class TimePeriod {
     this.length = length;
   }
 
+  public static TimePeriod fromAlias(String alias) {
+    switch (alias) {
+      case "S":
+      case "SEC":
+        return oneSecond();
+      case "MIN":
+      case "MINUTE":
+        return oneMinutes();
+      case "H":
+      case "HOUR":
+        return oneHour();
+      case "D":
+      case "DAY":
+        return oneDay();
+      case "W":
+      case "WEEK":
+        return oneWeek();
+      case "M":
+      case "MONTH":
+        return oneMonth();
+      case "Q":
+      case "QUARTER":
+        return oneQuarter();
+      case "Y":
+      case "YEAR":
+        return oneYear();
+      default:
+        throw new IllegalArgumentException("Unknown alias: " + alias);
+    }
+  }
+
+  /**
+   * Create and return a new TimePeriod representing exactly one minutes.
+   *
+   * @return a new TimePeriod representing exactly one minutes.
+   */
+  public static TimePeriod oneMinutes() {
+    return new TimePeriod(ChronoUnit.MINUTES, 1);
+  }
+
   /**
    * Create and return a new TimePeriod representing exactly one hour.
    *

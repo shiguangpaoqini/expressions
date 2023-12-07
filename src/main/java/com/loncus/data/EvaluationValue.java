@@ -436,6 +436,15 @@ public class EvaluationValue implements Comparable<EvaluationValue> {
     return isExpressionNode() ? ((ASTNode) getValue()) : null;
   }
 
+  /**
+   * Gets the time series point, if this value is of type {@link DataType#TIME_SERIES_POINT}.
+   *
+   * @return The time series point, or null for any other data type.
+   */
+  public TimeSeriesPoint getTimeSeriesPoint() {
+    return isTimeSeriesPoint() ? ((TimeSeriesPoint) getValue()) : null;
+  }
+
   @Override
   public int compareTo(EvaluationValue toCompare) {
     switch (getDataType()) {

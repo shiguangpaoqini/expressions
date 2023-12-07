@@ -156,8 +156,11 @@ class ExpressionTest {
         new Expression(
             "{d2776448-620b-4e80-8e4d-6db6ccc269cf}/(1-{474ec7e1-bf0f-4001-ae19-8baedada25c9}/100)-{474ec7e1-bf0f-4001-ae19-8baedada25c9}");
 
+    Expression expression1 =
+        new Expression(
+            "{edfbb9b6-562a-4d86-a3ab-ddf2eb15f5f8}-MOVE({f63658e8-9aca-4ed7-abcd-7123f82bda9c},\"DAY\",1)+MOVE({3ef13fa5-7551-4eb6-b44e-1d01ca70bdc8},\"DAY\",1)");
     Set vars = expression.getUsedVariables();
-
+    Set vars1 = expression1.getUsedVariables();
     assertThat(vars)
         .containsExactlyInAnyOrder(
             "{d2776448-620b-4e80-8e4d-6db6ccc269cf}", "{474ec7e1-bf0f-4001-ae19-8baedada25c9}");

@@ -62,6 +62,16 @@ public final class Time implements Comparable<Time> {
     return new Time(addedDateTime);
   }
 
+  public Time minus(TimePeriod timePeriod) {
+    return minus(timePeriod.length(), timePeriod);
+  }
+
+  public Time minus(long amountToSubtract, TimePeriod timePeriod) {
+    OffsetDateTime subtractedDateTime =
+        this.dateTime.minus(amountToSubtract, timePeriod.timeUnit());
+    return new Time(subtractedDateTime);
+  }
+
   public Instant toInstant() {
     return this.dateTime.toInstant();
   }

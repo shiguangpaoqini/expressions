@@ -28,13 +28,6 @@ public class TimeSeries {
     this.timeToIndexMap = Collections.unmodifiableMap(timeToIndexMap);
   }
 
-  /**
-   * generate time series from dates and values
-   *
-   * @param dates the dates
-   * @param values the values
-   * @return the time series
-   */
   public static TimeSeries from(
       @NonNull final List<Date> dates, @NonNull final List<BigDecimal> values) {
     List<Time> times = new ArrayList<>(dates.size());
@@ -45,17 +38,14 @@ public class TimeSeries {
     return new TimeSeries(times, values);
   }
 
-  /**
-   * generate time series from times and values
-   *
-   * @param times times
-   * @param values the values
-   * @return the time series
-   */
   public static TimeSeries fromTimes(
       @NonNull final List<Time> times, @NonNull final List<BigDecimal> values) {
 
     return new TimeSeries(times, values);
+  }
+
+  public List<BigDecimal> getValues() {
+    return new ArrayList<>(this.series);
   }
 
   public final NavigableSet<Time> getTimes() {
@@ -106,5 +96,41 @@ public class TimeSeries {
    */
   public final BigDecimal at(@NonNull final Time time) {
     return at(time, false);
+  }
+
+  /**
+   * This method is used to add a new data point to the TimeSeries object.
+   *
+   * @param time The time of the new data point.
+   * @param value The value of the new data point.
+   */
+  public void add(Time time, BigDecimal value) {
+    if (timeToIndexMap.containsKey(time)) {
+      throw new IllegalArgumentException("Time point already exists in the time series.");
+    }
+    times.add(time);
+    series.add(value);
+    timeToIndexMap.put(time, series.size() - 1);
+  }
+
+  /**
+   * This method is used to slice a TimeSeries object. It creates a new TimeSeries object that
+   * includes all data points from the start time to the end time.
+   *
+   * @param start The start time of the slice. This is inclusive.
+   * @param end The end time of the slice. This is inclusive.
+   * @return A new TimeSeries object that includes all data points from the start time to the end
+   *     time.
+   */
+  public TimeSeries slice(Time start, Time end) {
+    NavigableSet<Time> newTimes = times.subSet(start, true, end, true);
+
+    List<BigDecimal> newValues = new ArrayList<>();
+    for (Time time : newTimes) {
+      int index = timeToIndexMap.get(time);
+      newValues.add(series.get(index));
+    }
+
+    return new TimeSeries(new ArrayList<>(newTimes), newValues);
   }
 }

@@ -20,7 +20,7 @@ public class TimeSeriesPoint {
   }
 
   public BigDecimal getValue() {
-    return timeSeries.at(time);
+    return timeSeries.at(time, true);
   }
 
   public TimeSeriesPoint setTime(Time time) {
