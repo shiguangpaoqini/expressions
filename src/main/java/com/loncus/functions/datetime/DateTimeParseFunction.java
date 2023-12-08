@@ -10,10 +10,14 @@ import java.util.Optional;
 public class DateTimeParseFunction extends AbstractDateTimeParseFunction {
 
   protected Instant parse(String value, String format, ZoneId zoneId) {
-    return parseInstant(value)
-        .or(() -> parseLocalDateTime(value, format, zoneId))
-        .or(() -> parseDate(value, format))
-        .orElseThrow(() -> new IllegalArgumentException("Unable to parse date/time: " + value));
+    Optional<Instant> instant = parseInstant(value);
+    if (!instant.isPresent()) {
+      instant = parseLocalDateTime(value, format, zoneId);
+    }
+    if (!instant.isPresent()) {
+      instant = parseDate(value, format);
+    }
+    return instant.orElseThrow(() -> new IllegalArgumentException("Unable to parse date/time: " + value));
   }
 
   private Optional<Instant> parseLocalDateTime(String value, String format, ZoneId zoneId) {

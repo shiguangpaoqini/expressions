@@ -174,7 +174,6 @@ public class EvaluationValue implements Comparable<EvaluationValue> {
    * @param mathContext The math context to use.
    * @deprecated since 3.1.0 - Use {@link EvaluationValue(Object, ExpressionConfiguration)}.
    */
-  @Deprecated(since = "3.1.0", forRemoval = true)
   public EvaluationValue(double value, MathContext mathContext) {
     this.dataType = DataType.NUMBER;
     this.value = new BigDecimal(Double.toString(value), mathContext);

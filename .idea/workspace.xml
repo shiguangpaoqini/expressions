@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f2321bd-98b0-4cab-b5c0-fdbbe289d814" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/timeseries/MoveFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/timeseries/MovingAvgFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/config/ExpressionConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/config/ExpressionConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/data/EvaluationValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/EvaluationValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimePeriod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimePeriod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeriesPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/data/type/TimeSeriesPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/loncus/ExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/loncus/ExpressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeParseFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loncus/functions/datetime/DateTimeParseFunction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +91,7 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean" />
       <command value="mvn spotless:apply" />
     </option>
   </component>
@@ -264,7 +260,7 @@
       <workItem from="1700482644780" duration="146000" />
       <workItem from="1700482925754" duration="30081000" />
       <workItem from="1701831311938" duration="4560000" />
-      <workItem from="1701861965749" duration="10786000" />
+      <workItem from="1701861965749" duration="12753000" />
     </task>
     <servers />
   </component>

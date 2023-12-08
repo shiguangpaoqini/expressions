@@ -13,10 +13,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.time.ZoneId;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.function.Supplier;
 import lombok.Builder;
 import lombok.Getter;
@@ -36,10 +33,10 @@ import lombok.Getter;
  * <pre>
  *     ExpressionConfiguration.defaultConfiguration()
  *        .withAdditionalOperators(
- *            Map.entry("++", new PrefixPlusPlusOperator()),
- *            Map.entry("++", new PostfixPlusPlusOperator()))
- *        .withAdditionalFunctions(Map.entry("save", new SaveFunction()),
- *            Map.entry("update", new UpdateFunction()));
+ *            new AbstractMap.SimpleEntry<>("++", new PrefixPlusPlusOperator()),
+ *            new AbstractMap.SimpleEntry<>("++", new PostfixPlusPlusOperator()))
+ *        .withAdditionalFunctions(new AbstractMap.SimpleEntry<>("save", new SaveFunction()),
+ *            new AbstractMap.SimpleEntry<>("update", new UpdateFunction()));
  * </pre>
  */
 @Builder(toBuilder = true)
@@ -59,6 +56,8 @@ public class ExpressionConfiguration {
   /** The default zone id is the systemd default zone ID. */
   public static final ZoneId DEFAULT_ZONE_ID = ZoneId.systemDefault();
 
+  
+  
   /** The operator dictionary holds all operators that will be allowed in an expression. */
   @Builder.Default
   @Getter
@@ -66,26 +65,26 @@ public class ExpressionConfiguration {
   private final OperatorDictionaryIfc operatorDictionary =
       MapBasedOperatorDictionary.ofOperators(
           // arithmetic
-          Map.entry("+", new PrefixPlusOperator()),
-          Map.entry("-", new PrefixMinusOperator()),
-          Map.entry("+", new InfixPlusOperator()),
-          Map.entry("-", new InfixMinusOperator()),
-          Map.entry("*", new InfixMultiplicationOperator()),
-          Map.entry("/", new InfixDivisionOperator()),
-          Map.entry("^", new InfixPowerOfOperator()),
-          Map.entry("%", new InfixModuloOperator()),
+          new AbstractMap.SimpleEntry<>("+", new PrefixPlusOperator()), 
+          new AbstractMap.SimpleEntry<>("-", new PrefixMinusOperator()), 
+          new AbstractMap.SimpleEntry<>("+", new InfixPlusOperator()),
+          new AbstractMap.SimpleEntry<>("-", new InfixMinusOperator()),
+          new AbstractMap.SimpleEntry<>("*", new InfixMultiplicationOperator()),
+          new AbstractMap.SimpleEntry<>("/", new InfixDivisionOperator()),
+          new AbstractMap.SimpleEntry<>("^", new InfixPowerOfOperator()),
+          new AbstractMap.SimpleEntry<>("%", new InfixModuloOperator()),
           // booleans
-          Map.entry("=", new InfixEqualsOperator()),
-          Map.entry("==", new InfixEqualsOperator()),
-          Map.entry("!=", new InfixNotEqualsOperator()),
-          Map.entry("<>", new InfixNotEqualsOperator()),
-          Map.entry(">", new InfixGreaterOperator()),
-          Map.entry(">=", new InfixGreaterEqualsOperator()),
-          Map.entry("<", new InfixLessOperator()),
-          Map.entry("<=", new InfixLessEqualsOperator()),
-          Map.entry("&&", new InfixAndOperator()),
-          Map.entry("||", new InfixOrOperator()),
-          Map.entry("!", new PrefixNotOperator()));
+          new AbstractMap.SimpleEntry<>("=", new InfixEqualsOperator()),
+          new AbstractMap.SimpleEntry<>("==", new InfixEqualsOperator()),
+          new AbstractMap.SimpleEntry<>("!=", new InfixNotEqualsOperator()),
+          new AbstractMap.SimpleEntry<>("<>", new InfixNotEqualsOperator()),
+          new AbstractMap.SimpleEntry<>(">", new InfixGreaterOperator()),
+          new AbstractMap.SimpleEntry<>(">=", new InfixGreaterEqualsOperator()),
+          new AbstractMap.SimpleEntry<>("<", new InfixLessOperator()),
+          new AbstractMap.SimpleEntry<>("<=", new InfixLessEqualsOperator()),
+          new AbstractMap.SimpleEntry<>("&&", new InfixAndOperator()),
+          new AbstractMap.SimpleEntry<>("||", new InfixOrOperator()),
+          new AbstractMap.SimpleEntry<>("!", new PrefixNotOperator()));
 
   /** The function dictionary holds all functions that will be allowed in an expression. */
   @Builder.Default
@@ -94,21 +93,21 @@ public class ExpressionConfiguration {
   private final FunctionDictionaryIfc functionDictionary =
       MapBasedFunctionDictionary.ofFunctions(
           // basic functions
-          Map.entry("ABS", new AbsFunction()),
-          Map.entry("CEILING", new CeilingFunction()),
-          Map.entry("FACT", new FactFunction()),
-          Map.entry("FLOOR", new FloorFunction()),
-          Map.entry("IF", new IfFunction()),
-          Map.entry("LOG", new LogFunction()),
-          Map.entry("LOG10", new Log10Function()),
-          Map.entry("MAX", new MaxFunction()),
-          Map.entry("MIN", new MinFunction()),
-          Map.entry("NOT", new NotFunction()),
-          Map.entry("SUM", new SumFunction()),
-          Map.entry("SQRT", new SqrtFunction()),
+          new AbstractMap.SimpleEntry<>("ABS", new AbsFunction()),
+          new AbstractMap.SimpleEntry<>("CEILING", new CeilingFunction()),
+          new AbstractMap.SimpleEntry<>("FACT", new FactFunction()),
+          new AbstractMap.SimpleEntry<>("FLOOR", new FloorFunction()),
+          new AbstractMap.SimpleEntry<>("IF", new IfFunction()),
+          new AbstractMap.SimpleEntry<>("LOG", new LogFunction()),
+          new AbstractMap.SimpleEntry<>("LOG10", new Log10Function()),
+          new AbstractMap.SimpleEntry<>("MAX", new MaxFunction()),
+          new AbstractMap.SimpleEntry<>("MIN", new MinFunction()),
+          new AbstractMap.SimpleEntry<>("NOT", new NotFunction()),
+          new AbstractMap.SimpleEntry<>("SUM", new SumFunction()),
+          new AbstractMap.SimpleEntry<>("SQRT", new SqrtFunction()),
           // TimeSeriesPoint functions
-          Map.entry("MOVE", new MoveFunction()),
-          Map.entry("MA", new MovingAvgFunction()));
+          new AbstractMap.SimpleEntry<>("MOVE", new MoveFunction()),
+          new AbstractMap.SimpleEntry<>("MA", new MovingAvgFunction()));
 
   /** The math context to use. */
   @Builder.Default @Getter private final MathContext mathContext = DEFAULT_MATH_CONTEXT;
@@ -188,8 +187,8 @@ public class ExpressionConfiguration {
    *     Example: <code>
    *        ExpressionConfiguration.defaultConfiguration()
    *          .withAdditionalOperators(
-   *            Map.entry("++", new PrefixPlusPlusOperator()),
-   *            Map.entry("++", new PostfixPlusPlusOperator()));
+   *            new AbstractMap.SimpleEntry<>("++", new PrefixPlusPlusOperator()),
+   *            new AbstractMap.SimpleEntry<>("++", new PostfixPlusPlusOperator()));
    *     </code>
    * @return The modified configuration, to allow chaining of methods.
    */
@@ -209,8 +208,8 @@ public class ExpressionConfiguration {
    *     Example: <code>
    *        ExpressionConfiguration.defaultConfiguration()
    *          .withAdditionalFunctions(
-   *            Map.entry("save", new SaveFunction()),
-   *            Map.entry("update", new UpdateFunction()));
+   *            new AbstractMap.SimpleEntry<>("save", new SaveFunction()),
+   *            new AbstractMap.SimpleEntry<>("update", new UpdateFunction()));
    *     </code>
    * @return The modified configuration, to allow chaining of methods.
    */
