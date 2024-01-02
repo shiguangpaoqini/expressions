@@ -79,19 +79,19 @@
             </goals>
           </execution>
         </executions>
-<!--        <configuration>-->
-<!--          <java>-->
-<!--            <includes>-->
-<!--              <include>src/main/java/**/*.java</include>-->
-<!--              <include>src/test/java/**/*.java</include>-->
-<!--            </includes>-->
-<!--            <googleJavaFormat>-->
-<!--              <version>1.7</version>-->
-<!--              <style>GOOGLE</style>-->
-<!--              <reflowLongStrings>true</reflowLongStrings>-->
-<!--            </googleJavaFormat>-->
-<!--          </java>-->
-<!--        </configuration>-->
+        <configuration>
+          <java>
+            <includes>
+              <include>src/main/java/**/*.java</include>
+              <include>src/test/java/**/*.java</include>
+            </includes>
+            <googleJavaFormat>
+              <version>1.7</version>
+              <style>GOOGLE</style>
+              <reflowLongStrings>true</reflowLongStrings>
+            </googleJavaFormat>
+          </java>
+        </configuration>
       </plugin>
       <!-- run tests -->
       <plugin>
@@ -107,17 +107,18 @@
         </dependencies>
       </plugin>
       <!-- analyze code coverage -->
-<!--      <plugin>-->
-<!--        <groupId>org.jacoco</groupId>-->
-<!--        <artifactId>jacoco-maven-plugin</artifactId>-->
-<!--        <version>0.8.8</version>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>prepare-agent</id>-->
-<!--            <goals>-->
-<!--              <goal>prepare-agent</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+<!--    测试覆盖率检查      -->
 <!--          <execution>-->
 <!--            <id>check</id>-->
 <!--            <phase>prepare-package</phase>-->
@@ -144,15 +145,15 @@
 <!--              </rules>-->
 <!--            </configuration>-->
 <!--          </execution>-->
-<!--          <execution>-->
-<!--            <id>report</id>-->
-<!--            <phase>prepare-package</phase>-->
-<!--            <goals>-->
-<!--              <goal>report</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
+          <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
